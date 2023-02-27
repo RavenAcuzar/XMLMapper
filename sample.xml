@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ReportDefinition type="xml">
+    <TemplateName>Fortify Developer Workbook</TemplateName>
+    <TemplatePath></TemplatePath>
+    <LogoPath>/MF_logo.png</LogoPath>
+    <Footnote>Copyright 2022 Micro Focus or one of its affiliates.</Footnote>
+    <UserName>sheila.abella</UserName>
+    <ReportSection enabled="true" optionalSubsections="false">
+        <Title>Report Overview</Title>
+        <SubSection enabled="true">
+            <Title>Report Summary</Title>
+            <Description>This provides a high level summary of the findings that the analysis produced.  Also includes basic information on the scope of the scan.</Description>
+            <Text>On Feb 18, 2023, a source code review was performed over the VAmPI-master code base. 16 files, 360 LOC (Executable) were scanned. A total of 1 issues were uncovered during the analysis.  This report provides a comprehensive description of all the types of issues found in this project.  Specific examples and source code are provided for each issue type.</Text>
+        </SubSection>
+        <SubSection enabled="true">
+            <Title>Issue Summary by Fortify Priority Order</Title>
+            <Description>A table summarizing the number of issues found and the breakdown of issues in each Fortify Priority Level</Description>
+            <IssueListing listing="false" limit="-1">
+                <Refinement></Refinement>
+                <Chart chartType="table">
+                    <Axis>OWASP Top 10 2021</Axis>
+                    <MajorAttribute>Analysis</MajorAttribute>
+                    <GroupingSection count="1">
+                        <groupTitle>A05 Security Misconfiguration</groupTitle>
+                    </GroupingSection>
+                </Chart>
+            </IssueListing>
+        </SubSection>
+    </ReportSection>
+    <ReportSection enabled="true" optionalSubsections="false">
+        <Title>Issue Summary</Title>
+        <SubSection enabled="true">
+            <Title>Overall number of results</Title>
+            <Description>Results count</Description>
+            <Text>The scan found 1 issues.</Text>
+        </SubSection>
+        <SubSection enabled="true">
+            <Title>Issues By Category</Title>
+            <IssueListing listing="false" limit="-1">
+                <Refinement></Refinement>
+                <Chart chartType="table">
+                    <Axis>Category</Axis>
+                    <MajorAttribute>Analysis</MajorAttribute>
+                    <GroupingSection count="1">
+                        <groupTitle>Dockerfile Misconfiguration: Default User Privilege</groupTitle>
+                    </GroupingSection>
+                </Chart>
+            </IssueListing>
+        </SubSection>
+    </ReportSection>
+    <ReportSection enabled="true" optionalSubsections="true">
+        <Title>Results Outline</Title>
+        <SubSection enabled="true">
+            <Title>Vulnerability Examples by Category</Title>
+            <Description>Results summary of all issue categories.  Vulnerability examples are provided by category.</Description>
+            <IssueListing listing="true" limit="5">
+                <Refinement></Refinement>
+                <Chart chartType="list">
+                    <Axis>Category</Axis>
+                    <MajorAttribute>Analysis</MajorAttribute>
+                    <GroupingSection count="1">
+                        <groupTitle>Dockerfile Misconfiguration: Default User Privilege</groupTitle>
+                        <MajorAttributeSummary>
+                            <MetaInfo>
+<Name>Abstract</Name>
+<Value>The Dockerfile does not specify a USER, so it defaults to running with a root user.</Value>
+                            </MetaInfo>
+                            <MetaInfo>
+<Name>Explanation</Name>
+<Value>When a Dockerfile does not specify a USER, Docker containers run with super user privileges by default. These super user privileges are propagated to the code running inside the container, which is usually more permission than necessary. Running the Docker container with super user privileges broadens the attack surface which might enable attackers to perform more serious forms of exploitation.</Value>
+                            </MetaInfo>
+                            <MetaInfo>
+<Name>Recommendations</Name>
+<Value>It is good practice to run your containers as a non-root user when possible.
+
+To modify a docker container to use a non-root user, the Dockerfile needs to specify a different user, such as:
+
+RUN useradd myLowPrivilegeUser
+USER myLowPrivilegeUser
+
+    </Value>
+                            </MetaInfo>
+                            <AttributeValue>
+<Name>&lt;Unaudited&gt;</Name>
+<Count>1</Count>
+                            </AttributeValue>
+                            <AttributeValue>
+<Name>Not an Issue</Name>
+<Count>0</Count>
+                            </AttributeValue>
+                            <AttributeValue>
+<Name>Reliability Issue</Name>
+<Count>0</Count>
+                            </AttributeValue>
+                            <AttributeValue>
+<Name>Bad Practice</Name>
+<Count>0</Count>
+                            </AttributeValue>
+                            <AttributeValue>
+<Name>Suspicious</Name>
+<Count>0</Count>
+                            </AttributeValue>
+                            <AttributeValue>
+<Name>Exploitable</Name>
+<Count>0</Count>
+                            </AttributeValue>
+                        </MajorAttributeSummary>
+                        <Issue iid="C30558D67920422BF94AC1350B33CF49" ruleID="375B7CCC-5920-4230-AE53-A7B264045525">
+                            <Category>Dockerfile Misconfiguration: Default User Privilege</Category>
+                            <Folder>High</Folder>
+                            <Kingdom>Environment</Kingdom>
+                            <Abstract>The Dockerfile does not specify a USER, so it defaults to running with a root user.</Abstract>
+                            <Friority>High</Friority>
+                            <Primary>
+<FileName>Dockerfile</FileName>
+<FilePath>Dockerfile</FilePath>
+<LineStart>1</LineStart>
+<Snippet>FROM python:3.7-alpine as builder
+RUN apk --update add bash nano g++
+COPY . /vampi</Snippet>
+<TargetFunction>FROM()</TargetFunction>
+                            </Primary>
+                        </Issue>
+                    </GroupingSection>
+                </Chart>
+            </IssueListing>
+        </SubSection>
+    </ReportSection>
+</ReportDefinition>

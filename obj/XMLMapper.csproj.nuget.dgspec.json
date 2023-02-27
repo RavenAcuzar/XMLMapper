@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\racuzar001\\Documents\\XMLMapper\\XMLMapper.csproj": {}
+    "C:\\Users\\racuzar001\\Desktop\\XMLMapper\\XMLMapper.csproj": {}
   },
   "projects": {
-    "C:\\Users\\racuzar001\\Documents\\XMLMapper\\XMLMapper.csproj": {
+    "C:\\Users\\racuzar001\\Desktop\\XMLMapper\\XMLMapper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\racuzar001\\Documents\\XMLMapper\\XMLMapper.csproj",
+        "projectUniqueName": "C:\\Users\\racuzar001\\Desktop\\XMLMapper\\XMLMapper.csproj",
         "projectName": "XMLMapper",
-        "projectPath": "C:\\Users\\racuzar001\\Documents\\XMLMapper\\XMLMapper.csproj",
+        "projectPath": "C:\\Users\\racuzar001\\Desktop\\XMLMapper\\XMLMapper.csproj",
         "packagesPath": "C:\\Users\\racuzar001\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\racuzar001\\Documents\\XMLMapper\\obj\\",
+        "outputPath": "C:\\Users\\racuzar001\\Desktop\\XMLMapper\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\racuzar001\\AppData\\Roaming\\NuGet\\NuGet.Config"

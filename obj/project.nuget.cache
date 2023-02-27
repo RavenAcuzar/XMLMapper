@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sQyK4idv6erftbn9Rjlep+y9qwqqWdhNTd397P/+inXcSiQ+/hLfQPZ+JJd3Ron4qnxq3K9AVDaYf40HDzKdVA==",
+  "dgSpecHash": "Hgl8YXb1VX5zcr+eAwV9LE5JbndQFFgAreYaGIFjrP9CW7H7Jp1buNAhJFPd6hR+oNC2gx7qJsw8yhR8gqHQ1g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\racuzar001\\Documents\\XMLMapper\\XMLMapper.csproj",
+  "projectFilePath": "C:\\Users\\racuzar001\\Desktop\\XMLMapper\\XMLMapper.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\racuzar001\\.nuget\\packages\\documentformat.openxml\\2.19.0\\documentformat.openxml.2.19.0.nupkg.sha512",
     "C:\\Users\\racuzar001\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512",
